@@ -9,7 +9,7 @@ type FilterTab = 'all' | 'pending' | 'completed';
 type SortMode = 'dueDate' | 'priority' | 'recent';
 
 export function AllTasksPage() {
-  const { tasks, toggleTask, deleteTask, navigate, globalSearch, setGlobalSearch } = useApp();
+  const { tasks, tasksLoading, toggleTask, deleteTask, navigate, globalSearch, setGlobalSearch } = useApp();
   const [filter, setFilter] = useState<FilterTab>('all');
   const [sort, setSort] = useState<SortMode>('dueDate');
   const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
@@ -130,7 +130,12 @@ export function AllTasksPage() {
         </div>
 
         {/* Task List */}
-        {filteredTasks.length > 0 ? (
+        {tasksLoading ? (
+          <div className="py-12 flex flex-col items-center justify-center gap-3 text-light-on-surface-variant dark:text-dark-on-surface-variant">
+            <span className="w-6 h-6 border-2 border-light-primary border-t-transparent rounded-full animate-spin" />
+            <p className="font-body text-body-md">Loading your tasks...</p>
+          </div>
+        ) : filteredTasks.length > 0 ? (
           <div className="flex flex-col gap-gutter-sm">
             {filteredTasks.map((task) => (
               <article

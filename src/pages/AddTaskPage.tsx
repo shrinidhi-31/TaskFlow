@@ -11,29 +11,40 @@ export function AddTaskPage() {
   const [priority, setPriority] = useState<Priority>('Medium');
   const [dueDate, setDueDate] = useState(addTaskDefaultDueDate || '2026-11-26');
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [created, setCreated] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!title.trim()) {
       setError(true);
+      setErrorMessage(null);
       setCreated(false);
       return;
     }
     setError(false);
-    addTask({
-      title,
-      description,
-      category,
-      priority,
-      dueDate,
-    });
-    setCreated(true);
-    setTitle('');
-    setDescription('');
-    setCategory(selectedCategory || 'Work');
-    setPriority('Medium');
-    setDueDate(addTaskDefaultDueDate || '2026-11-26');
+    setErrorMessage(null);
+    setIsSubmitting(true);
+    try {
+      await addTask({
+        title,
+        description,
+        category,
+        priority,
+        dueDate,
+      });
+      setCreated(true);
+      setTitle('');
+      setDescription('');
+      setCategory(selectedCategory || 'Work');
+      setPriority('Medium');
+      setDueDate(addTaskDefaultDueDate || '2026-11-26');
+    } catch (err: any) {
+      setErrorMessage(err?.message || 'Failed to save task to Supabase.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -62,12 +73,12 @@ export function AddTaskPage() {
       <main className="w-full max-w-3xl mx-auto px-gutter-md lg:px-gutter-xl pb-gutter-xl">
         <div className="bg-light-surface-container-lowest dark:bg-dark-surface-container-low rounded-lg border border-light-outline-variant/60 dark:border-dark-outline-variant/60 p-gutter-lg sm:p-gutter-xl shadow-[0_4px_20px_rgba(26,28,26,0.04)]">
           <form onSubmit={handleSubmit} className="flex flex-col gap-gutter-md" noValidate>
-            {error && (
+            {(error || errorMessage) && (
               <div
                 className="rounded-md bg-light-error-container dark:bg-dark-error-container text-light-on-error-container dark:text-dark-on-error-container px-4 py-3 font-body text-body-sm"
                 role="alert"
               >
-                Please enter a task title before saving.
+                {errorMessage || 'Please enter a task title before saving.'}
               </div>
             )}
             {created && (
@@ -176,9 +187,13 @@ export function AddTaskPage() {
               </button>
               <button
                 type="submit"
-                className="px-5 py-2.5 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary shadow-sm hover:bg-light-primary-container font-body text-label-lg"
+                disabled={isSubmitting}
+                className="px-5 py-2.5 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary shadow-sm hover:bg-light-primary-container font-body text-label-lg disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-2"
               >
-                Save Task
+                {isSubmitting && (
+                  <span className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+                )}
+                <span>{isSubmitting ? 'Saving...' : 'Save Task'}</span>
               </button>
             </footer>
           </form>

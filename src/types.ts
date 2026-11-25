@@ -31,6 +31,7 @@ export interface Task {
   completed: boolean;
   completedAt?: string; // display label e.g. 'Completed Nov 25, 9:15 AM'
   createdAt: string; // display label e.g. 'Nov 23, 2026'
+  userId?: string;
 }
 
 export interface ActivityItem {
