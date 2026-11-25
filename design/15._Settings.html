@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow — Settings</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="fd66b9017899a5f6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'priority-high': '#93000A',
+        'priority-high-bg': '#FFDAD6',
+        'priority-medium': '#7A4F01',
+        'priority-medium-bg': '#FEF0D6',
+        'priority-low': '#2E4D3A',
+        'priority-low-bg': '#E6F4E8',
+        'success': '#2E4D3A',
+        'success-bg': '#D6FADF',
+        'warning': '#7A4F01',
+        'warning-bg': '#FEF0D6',
+        'light-primary': '#3A5946',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#52725D',
+        'light-on-primary-container': '#D1F5DB',
+        'light-secondary': '#556158',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#D5E3D7',
+        'light-on-secondary-container': '#27332B',
+        'light-tertiary': '#71474B',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#8C5F63',
+        'light-on-tertiary-container': '#FFE7E8',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FAF9F6',
+        'light-on-background': '#1A1C1A',
+        'light-surface': '#FAF9F6',
+        'light-surface-dim': '#DADAD7',
+        'light-surface-bright': '#FAF9F6',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F4F4F0',
+        'light-surface-container': '#EEEEEB',
+        'light-surface-container-high': '#E8E8E5',
+        'light-surface-container-highest': '#E3E3DF',
+        'light-on-surface': '#1A1C1A',
+        'light-surface-variant': '#DEE4DD',
+        'light-on-surface-variant': '#424843',
+        'light-outline': '#727972',
+        'light-outline-variant': '#C2C8C1',
+        'light-inverse-surface': '#2F312F',
+        'light-inverse-on-surface': '#F1F1ED',
+        'light-inverse-primary': '#ACCFB6',
+        'dark-primary': '#ACCFB6',
+        'dark-on-primary': '#183625',
+        'dark-primary-container': '#52725D',
+        'dark-on-primary-container': '#D1F5DB',
+        'dark-secondary': '#BCCABE',
+        'dark-on-secondary': '#27332B',
+        'dark-secondary-container': '#3D4A41',
+        'dark-on-secondary-container': '#ABB9AD',
+        'dark-tertiary': '#F0B9BD',
+        'dark-on-tertiary': '#4A262A',
+        'dark-tertiary-container': '#8C5F63',
+        'dark-on-tertiary-container': '#FFE7E8',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#121412',
+        'dark-on-background': '#E3E3DF',
+        'dark-surface': '#121412',
+        'dark-surface-dim': '#121412',
+        'dark-surface-bright': '#383A37',
+        'dark-surface-container-lowest': '#0D0F0D',
+        'dark-surface-container-low': '#1A1C1A',
+        'dark-surface-container': '#1E201E',
+        'dark-surface-container-high': '#292A28',
+        'dark-surface-container-highest': '#343533',
+        'dark-on-surface': '#E3E3DF',
+        'dark-surface-variant': '#424843',
+        'dark-on-surface-variant': '#C2C8C1',
+        'dark-outline': '#8C928C',
+        'dark-outline-variant': '#424843',
+        'dark-inverse-surface': '#E3E3DF',
+        'dark-inverse-on-surface': '#2F312F',
+        'dark-inverse-primary': '#466551',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '32px',
+        'page-margin': '32px',
+      },
+      fontFamily: {
+        'display': ['"Afacad Flux"', 'sans-serif'],
+        'headline': ['"Afacad Flux"', 'sans-serif'],
+        'title': ['"Afacad Flux"', 'sans-serif'],
+        'body': ['"Instrument Sans"', 'sans-serif'],
+        'label': ['"Instrument Sans"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-md': ['36px', { lineHeight: '42px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'display-md-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-lg': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.15px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.1px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '500' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.3px', fontWeight: '500' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '200ms',
+        'checkbox-draw': '250ms',
+        'surface-enter': '280ms',
+        'surface-exit': '200ms',
+        'progress-fill': '400ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'checkbox-draw': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'progress-fill': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'cubic-bezier(0.2, 0, 0, 1)',
+        'checkbox-draw': 'cubic-bezier(0.22, 1, 0.36, 1)',
+        'surface-enter': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'progress-fill': 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@500;600;700&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Source+Code+Pro:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-light-background text-light-on-background font-body antialiased">
+  <div class="min-h-screen flex bg-light-background pb-20 lg:pb-0">
+    <aside class="hidden lg:flex w-[260px] shrink-0 min-h-screen bg-light-surface-container-low border-r border-light-outline-variant/60 flex-col justify-between p-gutter-lg">
+      <div class="flex flex-col gap-gutter-xl">
+        <a href="../01-welcome/WelcomeLanding.html" class="flex items-center gap-gutter-sm px-1">
+          <div class="w-9 h-9 rounded-md bg-light-primary text-light-on-primary flex items-center justify-center shrink-0 shadow-sm"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="4" stroke="currentColor" stroke-width="2"></rect><path d="M8 12.5L10.8 15.2L16.5 9.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+          <div class="flex flex-col"><span class="font-headline text-title-lg text-light-on-surface leading-tight">TaskFlow</span><span class="font-body text-body-sm text-light-on-surface-variant">Organise your day.</span></div>
+        </a>
+        <nav aria-label="Main navigation" class="flex flex-col gap-gutter-xs">
+          <a href="../05-dashboard/Dashboard.html" class="flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body text-label-lg">Dashboard</span></a>
+          <a href="../06-all-tasks/AllTasks.html" class="flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container"><span class="material-symbols-outlined text-[20px]">task_alt</span><span class="font-body text-label-lg">My Tasks</span></a>
+          <a href="../07-today-tasks/TodayTasks.html" class="flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container"><span class="material-symbols-outlined text-[20px]">today</span><span class="font-body text-label-lg">Today</span></a>
+          <a href="../08-upcoming-tasks/UpcomingTasks.html" class="flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container"><span class="material-symbols-outlined text-[20px]">event_upcoming</span><span class="font-body text-label-lg">Upcoming</span></a>
+          <a href="../09-completed-tasks/CompletedTasks.html" class="flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container"><span class="material-symbols-outlined text-[20px]">check_circle</span><span class="font-body text-label-lg">Completed</span></a>
+          <a href="../10-categories/Categories.html" class="flex items-center gap-gutter-sm px-3 py-2.5 rounded text-light-on-surface-variant hover:bg-light-surface-container"><span class="material-symbols-outlined text-[20px]">folder</span><span class="font-body text-label-lg">Categories</span></a>
+        </nav>
+      </div>
+      <div class="flex flex-col gap-gutter-xs pt-gutter-lg border-t border-light-outline-variant/60">
+        <a href="../15-settings/Settings.html" class="flex items-center gap-gutter-sm px-3 py-2 rounded bg-light-secondary-container text-light-on-secondary-container"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body text-label-lg">Settings</span></a>
+        <a href="../14-profile/UserProfile.html" class="flex items-center gap-gutter-sm px-2 py-1.5 rounded-md bg-light-surface-container-lowest border border-light-outline-variant/50"><img src="https://lh3.googleusercontent.com/aida/ALJJyrDq9ysTzRbUL8_Urohea31wbAxNCJOdQK4aDdEuXEBadH8yC5Q-cgrJkaPz9BFswMXK-RQxtN3XnG7-fwaOxoWDegZ1amOAOZLAYiEzELuovQq8Ll63X3epdrP4QOue-HyXOwA-xMWaG6MTaqDivUIHt5h-368xHFe6T1VGsTVRgiAJw8bqLNEbxXKP5ECgDrJUj54wf5QJqvNwOx5uh1JxXCCzHC48h5ZQSBpHGBqBwWpwOZPa" alt="Maya Lin" class="w-9 h-9 rounded-full object-cover shrink-0" data-stitch-original-src="98cbe6198466aeab===../../images/avatar_maya.jpg"><div class="flex flex-col min-w-0"><span class="font-body text-title-md text-light-on-surface truncate">Maya Lin</span><span class="font-body text-body-sm text-light-on-surface-variant truncate">Profile</span></div></a>
+      </div>
+    </aside>
+
+    <div class="flex-1 min-w-0 flex flex-col">
+      <header class="w-full max-w-3xl mx-auto px-gutter-md lg:px-gutter-xl pt-gutter-lg lg:pt-gutter-xl pb-gutter-lg">
+        <h1 class="font-headline text-headline-lg text-light-on-surface">Settings</h1>
+        <p class="font-body text-body-md text-light-on-surface-variant">Configure account, notification, and appearance preferences.</p>
+      </header>
+
+      <main class="w-full max-w-3xl mx-auto px-gutter-md lg:px-gutter-xl pb-gutter-xl flex flex-col gap-gutter-lg">
+        <!-- Account Preferences -->
+        <section class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-md">
+          <h2 class="font-headline text-title-lg text-light-on-surface">Account Preferences</h2>
+          <div class="flex items-center justify-between gap-gutter-md">
+            <div>
+              <p class="font-body text-title-md text-light-on-surface">Default start view</p>
+              <p class="font-body text-body-sm text-light-on-surface-variant">Choose which screen opens when you sign in.</p>
+            </div>
+            <select aria-label="Default start view" class="rounded-md border border-light-outline-variant bg-light-surface-container-lowest px-3 py-2 font-body text-body-md text-light-on-surface">
+              <option>Dashboard</option>
+              <option>Today&#39;s Tasks</option>
+              <option>My Tasks</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Notification Preferences -->
+        <section class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-md">
+          <h2 class="font-headline text-title-lg text-light-on-surface">Notification Preferences</h2>
+          <label class="flex items-center justify-between gap-gutter-md cursor-pointer">
+            <div>
+              <p class="font-body text-title-md text-light-on-surface">Daily morning digest</p>
+              <p class="font-body text-body-sm text-light-on-surface-variant">Receive a summary of today&#39;s tasks at 8:00 AM.</p>
+            </div>
+            <input type="checkbox" checked class="rounded-sm border-light-outline-variant text-light-primary focus:ring-light-primary">
+          </label>
+          <label class="flex items-center justify-between gap-gutter-md cursor-pointer pt-gutter-sm border-t border-light-outline-variant/40">
+            <div>
+              <p class="font-body text-title-md text-light-on-surface">Overdue task alerts</p>
+              <p class="font-body text-body-sm text-light-on-surface-variant">Notify when a scheduled task passes its due date.</p>
+            </div>
+            <input type="checkbox" checked class="rounded-sm border-light-outline-variant text-light-primary focus:ring-light-primary">
+          </label>
+        </section>
+
+        <!-- Appearance Preferences -->
+        <section class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex flex-col gap-gutter-md">
+          <h2 class="font-headline text-title-lg text-light-on-surface">Appearance Preferences</h2>
+          <label class="flex items-center justify-between gap-gutter-md cursor-pointer">
+            <div>
+              <p class="font-body text-title-md text-light-on-surface">Completion celebrations</p>
+              <p class="font-body text-body-sm text-light-on-surface-variant">Show subtle confetti burst and toast when completing tasks.</p>
+            </div>
+            <input type="checkbox" checked class="rounded-sm border-light-outline-variant text-light-primary focus:ring-light-primary">
+          </label>
+        </section>
+
+        <!-- Logout -->
+        <section class="bg-light-surface-container-lowest rounded-lg border border-light-outline-variant/60 p-gutter-lg flex items-center justify-between gap-gutter-md">
+          <div>
+            <h2 class="font-headline text-title-lg text-light-on-surface">Sign out</h2>
+            <p class="font-body text-body-sm text-light-on-surface-variant">Log out of Maya Lin&#39;s session on this device.</p>
+          </div>
+          <button id="logout-btn" type="button" class="px-4 py-2 rounded bg-light-error-container text-light-on-error-container font-body text-label-lg">Logout</button>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Logout Confirmation Dialog -->
+  <dialog id="logout-dialog" role="alertdialog" class="w-full max-w-sm rounded-lg border border-light-outline-variant/60 bg-light-surface-container-lowest p-gutter-lg shadow-xl m-auto">
+    <div class="flex flex-col gap-gutter-md">
+      <h2 class="font-headline text-title-lg text-light-on-surface">Log out of TaskFlow?</h2>
+      <p class="font-body text-body-md text-light-on-surface-variant">You can sign back in anytime with your email and password.</p>
+      <div class="flex justify-end gap-gutter-sm">
+        <button id="logout-cancel" type="button" class="px-4 py-2 rounded border border-light-outline-variant font-body text-label-lg">Cancel</button>
+        <a href="../02-login/Login.html" class="px-4 py-2 rounded bg-light-error text-light-on-error font-body text-label-lg">Logout</a>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    const ld = document.getElementById('logout-dialog');
+    document.getElementById('logout-btn').addEventListener('click', () => ld.showModal());
+    document.getElementById('logout-cancel').addEventListener('click', () => ld.close());
+  </script>
+
+
+</body></html>

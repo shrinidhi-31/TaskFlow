@@ -1,0 +1,6 @@
+{
+  "name": "TaskFlow",
+  "description": "Organise your day. Get things done. A calm, focused personal productivity and task management workspace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
